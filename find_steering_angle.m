@@ -16,6 +16,8 @@ function [steering_angle] = find_steering_angle(bot_location, bot_rotation, wayp
     delta_theta = atand(delta_y/delta_x);
 
     % Subtract angle between car and waypoint to find steering angle
-    steering_angle = delta_theta - bot_rotation;
+    total_angle = delta_theta - bot_rotation;
     
+    % Clamp steering angle and adjust to allow for out of bounds angles
+    steering_angle = clamp(total_angle, steering_limit)
 end
