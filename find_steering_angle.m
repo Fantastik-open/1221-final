@@ -19,5 +19,5 @@ function [steering_angle] = find_steering_angle(bot_location, bot_rotation, wayp
     total_angle = delta_theta - bot_rotation;
     
     % Clamp steering angle and adjust to allow for out of bounds angles
-    steering_angle = clamp(total_angle, steering_limit)
+    steering_angle = clamp(total_angle, steering_limit);
 end
