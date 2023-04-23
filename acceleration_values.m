@@ -10,6 +10,6 @@ function alpha = acceleration_values(v, w, c1, c2, a, b, m, J, u)
     % u - steering input
 
     %angular acceleration
-    alpha = (-1 * (((a.^2)*c1) + (((b.^2)*c2))*w))/(J*v) + (a*c1*u)/J ;
+    alpha = ((-1 * (((a^2) * c1) + (((b^2) * c2)) * w))/(J * v)) + ((a * c1 * u) / J) ;
 
 end
