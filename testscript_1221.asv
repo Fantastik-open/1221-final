@@ -2,6 +2,7 @@
 clear
 clc
 
+%% verifying acceleration function
 
 % Acceleration for when steering angle is 45 degrees.
 try
@@ -27,6 +28,14 @@ catch
 end
 
 
+%% Verifying find steering angle function
+
+%
+try
+    assert(find_steering_angle(bot_location, bot_rotation, waypoint_location, steering_limit))
+catch
+    fprintf('assertion failure in find_steering_angle')
+end
 
 
 
